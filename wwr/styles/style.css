@@ -194,4 +194,67 @@ footer .sociallinks img {
 
     .rafting-images figure {
         flex: 1 1 calc(100% - 20px); /* Adjust for smaller screens */
-    }
+
+
+       /* Employee profiles */
+.employee-profiles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.profile {
+    text-align: center;
+    width: 30%; /* Adjust the width to fit the screen */
+    margin: 0 10px;
+}
+
+.profile img {
+    width: 100%; /* Adjust to fit within the width */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds a rounded border effect */
+}
+
+.profile p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Contact form section */
+.contact-form {
+    margin-right: 20px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Map section */
+.map {
+    margin-top: 20px;
+}
