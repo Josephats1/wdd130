@@ -142,7 +142,7 @@ nav a:hover {
 }
 .rafting-images {
     display: flex; /* Aligns the images horizontally */
-    gap: 2px; /* Space between images */
+    gap: 1px; /* Space between images */
     overflow: hidden; /* Prevents overflow */
     justify-content: space-between; /* Distributes space evenly */
 }
@@ -198,9 +198,10 @@ footer .sociallinks img {
 
        /* Employee profiles */
 .employee-profiles {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    display: flex; /* Aligns the images horizontally */
+    gap: 2px; /* Space between images */
+    overflow: hidden; /* Prevents overflow */
+    justify-content: space-between; /* Distributes space evenly */
 }
 
 .profile {
