@@ -141,18 +141,36 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .rafting-images {
-    display: flex; /* Aligns the images horizontally */
-    gap: 1px; /* Space between images */
-    overflow: hidden; /* Prevents overflow */
-    justify-content: space-between; /* Distributes space evenly */
+    display: flex;                  /* Align images horizontally */
+    flex-wrap: wrap;               /* Allow wrapping of images on smaller screens */
+    gap: 8px;                     /* Space between images */
+    justify-content: center;        /* Center the images */
+    margin: 20px 0;                /* Margin above and below the section */
+}
+
+.rafting-images figure {
+    flex: 1 1 200px;               /* Flex item with a base width of 200px */
+    border-radius: 8px;            /* Rounded corners for figures */
+    overflow: hidden;               /* Hide overflow for rounded corners */
+    transition: transform 0.3s;     /* Smooth scaling on hover */
+}
+
+.rafting-images figure:hover {
+    transform: scale(1.05);        /* Scale up image on hover */
 }
 
 .rafting-images img {
-    flex: 1; /* Allows the images to grow */
-    min-width: 200px; /* Set a minimum width for the images */
-    max-width: 50%; /* Makes sure images do not exceed 25% of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;                   /* Make image fill the figure */
+    height: auto;                  /* Maintain aspect ratio */
 }
+
+.rafting-images figcaption {
+    text-align: center;            /* Center align captions */
+    margin-top: 5px;              /* Space above captions */
+    font-weight: bold;             /* Bold captions */
+    color: #007bff;                /* Caption color */
+}
+
 
 
 footer {
@@ -196,14 +214,30 @@ footer .sociallinks img {
         flex: 1 1 calc(100% - 20px); /* Adjust for smaller screens */
 
 
-       /* Employee profiles */
-.employee-profiles {
-    display: flex; /* Aligns the images horizontally */
-    gap: 2px; /* Space between images */
-    overflow: hidden; /* Prevents overflow */
-    justify-content: space-between; /* Distributes space evenly */
-}
-
+        .employee-profiles {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to the next line */
+            justify-content: space-between; /* Space between cards */
+            margin: 20px 0; /* Margin above and below the section */
+        }
+        
+        .profile-card {
+            background: #fff; /* White background for cards */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            flex: 1 1 calc(50% - 20px); /* Two cards per row with spacing */
+            margin: 10px; /* Space around cards */
+            padding: 20px; /* Padding inside cards */
+            text-align: center; /* Center align text */
+        }
+        
+        .profile-card img {
+            border-radius: 50%; /* Circular profile images */
+            width: 100px; /* Set width for profile images */
+            height: 100px; /* Set height for profile images */
+            margin-bottom: 15px; /* Space below the image */
+        }
+        
 .profile {
     text-align: center;
     width: 30%; /* Adjust the width to fit the screen */
@@ -222,40 +256,96 @@ footer .sociallinks img {
     font-weight: bold;
 }
 
-/* Contact form section */
 .contact-form {
-    margin-right: 20px;
-    padding: 20px;
-}
-
-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack form elements vertically */
 }
 
-form label {
-    margin-bottom: 5px;
+.contact-form label {
+    margin: 10px 0 5px; /* Space around labels */
 }
 
-form input, form textarea, form button {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+.contact-form button {
+    margin-top: 15px; /* Space above button */
+    padding: 10px; /* Padding inside button */
+    background: #007bff; /* Button background color */
+    color: #fff; /* White text for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
-form button:hover {
-    background-color: #0056b3;
+.contact-form button:hover {
+    background: #0056b3; /* Darker shade on hover */
 }
 
-/* Map section */
 .map {
-    margin-top: 20px;
+    margin-top: 20px; /* Space above map */
+    text-align: center; /* Center align map */
+}
+}
+.trip-details {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trip {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.trip:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.trip-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background: #00509e;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
 }
