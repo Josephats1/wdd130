@@ -1,32 +1,71 @@
+/* Navigation */
 nav {
-  background-color: steelblue;
-  padding: 10px;
-  text-align: center;
+    background-color: steelblue;
+    padding: 10px;
+    text-align: center;
 }
 
 nav a {
-  color: white;
-  display: inline-block;
-  padding: 10px;
-  text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
 }
 
+/* Heading */
 h1 {
-  color: steelblue;
-  text-align: center;
-  border-bottom: 1px solid steelblue;
-  padding-bottom: 10px;
+    color: steelblue;
+    text-align: center;
+    border-bottom: 1px solid steelblue;
+    padding-bottom: 10px;
 }
 
+/* Images */
 img {
-  width: 150px;
-  height: auto;
-  border: 1px solid steelblue;
-  padding: 2px;
-  box-shadow: 0 0 30px gray;
+    width: 150px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
 }
 
+/* Main Content */
 main {
-  max-width: 840px;
-  margin: 0 auto;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Aside Section */
+aside {
+    width: 300px;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraphs */
+p {
+    padding: 0;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
 }
