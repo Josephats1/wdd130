@@ -1,0 +1,39 @@
+/* Limit main width */
+main {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the aside */
+aside {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Style the image inside aside */
+aside img {
+  width: 200px;
+  height: auto;
+}
+
+/* Make existing profile pic styling more specific */
+main img {
+  width: 150px;
+  height: auto;
+}
+
+/* Remove paragraph padding */
+p {
+  padding: 0;
+}
+
+/* Style the footer */
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
