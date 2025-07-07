@@ -1,39 +1,32 @@
-/* Limit main width */
-main {
-  width: 800px;
-  margin: 0 auto;
-}
-
-/* Style the aside */
-aside {
-  width: 300px;
-  margin: 20px;
-  border: 1px solid #ccc;
+nav {
+  background-color: steelblue;
   padding: 10px;
-  background-color: #f9f9f9;
-  color: #333;
+  text-align: center;
 }
 
-/* Style the image inside aside */
-aside img {
-  width: 200px;
-  height: auto;
+nav a {
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
 }
 
-/* Make existing profile pic styling more specific */
-main img {
+h1 {
+  color: steelblue;
+  text-align: center;
+  border-bottom: 1px solid steelblue;
+  padding-bottom: 10px;
+}
+
+img {
   width: 150px;
   height: auto;
+  border: 1px solid steelblue;
+  padding: 2px;
+  box-shadow: 0 0 30px gray;
 }
 
-/* Remove paragraph padding */
-p {
-  padding: 0;
-}
-
-/* Style the footer */
-footer {
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
-  text-align: center;
+main {
+  max-width: 840px;
+  margin: 0 auto;
 }
