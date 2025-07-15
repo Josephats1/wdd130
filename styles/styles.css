@@ -21,7 +21,7 @@ h1 {
 }
 
 /* Images */
-img {
+main img {
     width: 150px;
     height: auto;
     border: 1px solid steelblue;
