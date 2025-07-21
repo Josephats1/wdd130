@@ -78,8 +78,9 @@ nav a:hover {
 
 .hero article {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: 'Times New Roman', Times, serif;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
@@ -87,6 +88,8 @@ nav a:hover {
   height: 150px;
   border-radius: 8px;
 }
+
+
 .author { color: #FF6E40;}
 .hero article img {
   float: right;
@@ -98,17 +101,37 @@ nav a:hover {
 
 /* ===== HISTORY SECTION ===== */
 .history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   padding: 25px;
   border-radius: 8px;
   margin-bottom: 30px;
+  gap: 30px; /* space between text and image */
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+.history img {
+  max-width: 250px;
+  max-height: 250px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .history h2 {
   color: var(--primary-color);
   margin-bottom: 15px;
   font-size: 1.8rem;
+  width: 100%;
+  text-align: center;
 }
+
+.history p {
+  flex: 1;
+  min-width: 200px;
+}
+
 
 /* ===== GALLERY SECTION ===== */
 .adventure-gallery {
@@ -131,7 +154,7 @@ nav a:hover {
 }
 
 .gallery img {
-  width: 100%;
+  width: 210px;
   height: 220px;
   object-fit: cover;
   border-radius: 5px;
@@ -150,14 +173,18 @@ nav a:hover {
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 20px;
+ 
+
   background-color: var(--primary-color);
   color: white;
-  margin-top: 30px;
+
 }
 
 .sociallinks {
-  margin-top: 15px;
+
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the right */
+  align-items: center; /* Optional: vertically center icons */
 }
 
 .sociallinks a {
@@ -166,8 +193,8 @@ footer {
 }
 
 .sociallinks img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   transition: transform 0.3s;
 }
