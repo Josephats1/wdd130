@@ -24,7 +24,10 @@ header, main, footer {
   margin: 0 auto;
   padding: 20px;
 }
-
+header img{
+  height: 50px;
+  width: 50px;
+}
 /* ===== HEADER ===== */
 header {
   display: flex;
