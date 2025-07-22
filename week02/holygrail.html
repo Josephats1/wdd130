@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Animated Word Drop Inline</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .sentence {
+      font-size: 2rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .static {
+      color: white;
+    }
+
+    .animated-word {
+      display: inline-block;
+      min-width: 6ch;
+      margin: 0 0.4rem;
+    }
+
+    .letter {
+      opacity: 0;
+      transform: translateY(-30px);
+      display: inline-block;
+      animation: drop 0.4s forwards;
+    }
+
+    @keyframes drop {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .word-0 .letter { color: #e74c3c; }  /* Red */
+    .word-1 .letter { color: #3498db; }  /* Blue */
+    .word-2 .letter { color: #2ecc71; }  /* Green */
+    .word-3 .letter { color: #f1c40f; }  /* Yellow */
+    .word-4 .letter { color: #9b59b6; }  /* Purple */
+  </style>
 </head>
 <body>
-    
+
+  <div class="sentence">
+    <span class="static">You must</span>
+    <span id="animatedWord" class="animated-word"></span>
+    <span class="static">to succeed.</span>
+  </div>
+
+  <script>
+    const words = ["Dream", "Build", "Inspire", "Create", "Shine"];
+    const container = document.getElementById("animatedWord");
+
+    let current = 0;
+
+    function animateWord(index) {
+      const word = words[index];
+      container.className = `animated-word word-${index}`;
+      container.innerHTML = "";
+
+      word.split('').forEach((letter, i) => {
+        const span = document.createElement("span");
+        span.classList.add("letter");
+        span.textContent = letter;
+        span.style.animationDelay = `${i * 0.2}s`;
+        container.appendChild(span);
+      });
+
+      // Go to next word
+      const totalDuration = word.length * 200 + 1500;
+      setTimeout(() => {
+        container.innerHTML = ""; // clear before next
+        current = (current + 1) % words.length;
+        animateWord(current);
+      }, totalDuration);
+    }
+
+    animateWord(current);
+  </script>
+
 </body>
 </html>
+
