@@ -21,15 +21,15 @@ body {
 /* ===== LAYOUT ===== */
 main, footer {
   width: auto;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
 /* ===== HEADER ===== */
+/* ===== HEADER ===== */
 header {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr; /* Three-column layout */
   align-items: center;
   padding: 20px;
   background-color: #f4f4f4;
@@ -38,19 +38,19 @@ header {
 }
 
 header img {
-  grid-column: 2;
-  justify-self: center;
+  grid-column: 1; /* Move logo to first column */
+  justify-self: end; /* Align to right of first column */
   height: 50px;
   width: auto;
   border-radius: 50%;
+  margin-right: 5rem; /* Reduced from 5rem */
 }
 
 nav {
-  grid-column: 3;
+  grid-column: 2; /* Move nav to center column */
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 20px;
-  padding-right: 20px;
 }
 
 nav a {
@@ -60,10 +60,26 @@ nav a {
   font-family: var(--heading-font);
   text-transform: uppercase;
   font-size: 0.9rem;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-nav a:hover {
-  color: var(--accent1-color);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 15px;
+  }
+  
+  header img {
+    grid-column: 1;
+    justify-self: center;
+    margin-right: 0;
+  }
+  
+  nav {
+    grid-column: 1;
+  }
 }
 
 /* ===== HERO SECTION ===== */
@@ -206,19 +222,25 @@ nav a:hover {
 }
 
 /* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
 footer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background-color: var(--primary-color);
   color: white;
   padding: 30px 20px;
   margin-top: 40px;
+  position: relative; /* Needed for absolute positioning alternative */
 }
 
 .sociallinks {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Changed from center to flex-start */
   margin-top: 20px;
+  padding-right: 20px; /* Add some left padding */
 }
+
 
 .sociallinks a {
   margin: 0 10px;
@@ -236,6 +258,10 @@ footer {
   border-radius: 50%;
 }
 
+/* Keep copyright centered */
+footer p {
+  margin: 0 auto; /* Center the copyright text */
+}
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   header {
