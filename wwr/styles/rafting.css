@@ -315,7 +315,7 @@ footer p {
 /* ===== CONTACT PAGE STYLES ===== */
 /* Main Layout */
 main.contact-page {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1rem;
   font-family: var(--body-font);
@@ -420,10 +420,11 @@ main.contact-page {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+nav a {
+  text-decoration: none;
+  font-weight: bold;
 }
+
 
 .card-icon svg {
   width: 40px;
