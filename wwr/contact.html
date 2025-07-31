@@ -24,134 +24,169 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+<main class="contact-page">
 
- <main class="contact-page">
-  <!-- HERO SECTION -->
+  <!-- Hero Section -->
   <section class="contact-hero">
     <div class="hero-content">
-      <h1>Your Adventure Starts Here</h1>
-      <p>Reach out and our expert team will guide you to your next thrilling experience on the river.</p>
+      <h1>We're Here to Help</h1>
+      <p>Have questions about rafting adventures? Our team is ready to assist you!</p>
       <div class="cta-buttons">
-        <a href="#contact-form" class="primary-cta">Send Message</a>
+        <a href="#contact-form" class="primary-cta">Send a Message</a>
         <a href="tel:+18005551234" class="secondary-cta">
-         
+          <svg><!-- phone icon --></svg> Call Now
         </a>
       </div>
     </div>
     <div class="hero-image">
-      <img src="../images/raft.png" alt="Happy rafting team">
+      <img src="../images/raft.png" alt="Happy rafting team helping customers">
     </div>
   </section>
 
-  <!-- CONTACT METHODS -->
+  <!-- Contact Methods -->
   <section class="contact-methods">
-    <h2 class="section-title">Connect With Us</h2>
+    <h2 class="section-title">Choose How to Reach Us</h2>
     <div class="contact-cards">
       <div class="contact-card">
         <div class="card-icon"><svg><!-- map icon --></svg></div>
-        <h3>Visit</h3>
-        <address>123 River Road<br>Rapids City, RC 12345</address>
-        <a href="#map" class="card-link">View Map →</a>
+        <h3>Visit Us</h3>
+        <address>
+          123 River Road<br>
+          Rapids City, RC 12345
+        </address>
+        <a href="#map" class="card-link">View on Map →</a>
       </div>
+
       <div class="contact-card highlight">
         <div class="card-icon"><svg><!-- phone icon --></svg></div>
-        <h3>Call</h3>
-        <p>Available 9AM - 5PM daily</p>
+        <h3>Call Us</h3>
+        <p>Available 9AM–5PM daily</p>
         <a href="tel:+18005551234" class="card-link">(800) 555-1234</a>
       </div>
+
       <div class="contact-card">
         <div class="card-icon"><svg><!-- email icon --></svg></div>
-        <h3>Email</h3>
-        <p>Replies within 24 hours</p>
+        <h3>Email Us</h3>
+        <p>Response within 24 hours</p>
         <a href="mailto:info@riverrush.com" class="card-link">info@riverrush.com</a>
       </div>
     </div>
   </section>
 
-  <!-- MAP SECTION -->
+  <!-- Map Section -->
   <section class="map-section" id="map">
-    <h2 class="section-title">Visit Our Base</h2>
+    <h2 class="section-title">Our Location</h2>
     <div class="map-container">
-      <iframe src="https://maps.google.com/maps?q=123+River+Road&output=embed"></iframe>
+      <iframe src="https://maps.google.com/maps?q=123+River+Road&output=embed" loading="lazy"></iframe>
       <div class="map-overlay">
-        <button class="directions-btn"><svg><!-- directions icon --></svg> Get Directions</button>
+        <button class="directions-btn">
+          <svg><!-- directions icon --></svg> Get Directions
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- TEAM SECTION -->
+  <!-- Team Section -->
   <section class="team-section">
-    <h2 class="section-title">Meet Our Guides</h2>
-    <p class="section-subtitle">Certified professionals ready to keep your journey safe and unforgettable</p>
+    <h2 class="section-title">Your Adventure Guides</h2>
+    <p class="section-subtitle">Meet the experts ready to make your experience unforgettable</p>
     <div class="team-grid">
       <div class="team-member">
         <div class="member-image">
           <img src="../images/woman.png" alt="Sarah Johnson">
           <div class="social-links">
-            <a href="#"><svg><!-- IG --></svg></a>
-            <a href="#"><svg><!-- FB --></svg></a>
+            <a href="#"><svg><!-- instagram --></svg></a>
+            <a href="#"><svg><!-- facebook --></svg></a>
           </div>
         </div>
         <div class="member-info">
           <h3>Sarah Johnson</h3>
-          <p class="position">Lead Guide</p>
-          <p class="bio">15+ years experience with whitewater rescue training.</p>
+          <p class="position">Head River Guide</p>
+          <p class="bio">15 years of rafting experience with certifications in safety and rescue operations.</p>
         </div>
       </div>
+      <!-- Add more team members here -->
     </div>
   </section>
 
-  <!-- CONTACT FORM -->
+  <!-- Contact Form -->
   <section class="contact-form-section" id="contact-form">
     <div class="form-container">
       <div class="form-header">
-        <h2>Reach Out Today</h2>
-        <p>We're here to help within 2 business hours.</p>
+        <h2>Send Us a Message</h2>
+        <p>We typically respond within 2 business hours</p>
       </div>
+
       <form class="modern-form">
+        <!-- Name -->
         <div class="form-group floating">
           <input type="text" id="name" required>
-          <label for="name">Name</label>
+          <label for="name">Your Name</label>
         </div>
+
+        <!-- Email -->
         <div class="form-group floating">
           <input type="email" id="email" required>
-          <label for="email">Email</label>
+          <label for="email">Email Address</label>
         </div>
+
+        <!-- Purpose Options -->
         <div class="form-group">
-          <label class="form-label">Reason for Contact</label>
+          <label class="form-label">How can we help?</label>
           <div class="purpose-options">
-            <label class="option-card">
-              <input type="radio" name="purpose" value="general" checked>
-              <div class="option-content"><svg></svg><span>General Question</span></div>
-            </label>
-            <label class="option-card">
-              <input type="radio" name="purpose" value="reservation">
-              <div class="option-content"><svg></svg><span>Reservation</span></div>
-            </label>
-            <label class="option-card">
-              <input type="radio" name="purpose" value="feedback">
-              <div class="option-content"><svg></svg><span>Feedback</span></div>
-            </label>
+
+            <div class="option-card">
+              <input type="radio" name="purpose" value="general" id="general" checked>
+              <label for="general">
+                <svg><!-- question icon --></svg>
+                <span>General Question</span>
+              </label>
+            </div>
+
+            <div class="option-card">
+              <input type="radio" name="purpose" value="reservation" id="reservation">
+              <label for="reservation">
+                <svg><!-- calendar icon --></svg>
+                <span>Reservation Help</span>
+              </label>
+            </div>
+
+            <div class="option-card">
+              <input type="radio" name="purpose" value="suggestion" id="suggestion">
+              <label for="suggestion">
+                <svg><!-- lightbulb icon --></svg>
+                <span>Website Feedback</span>
+              </label>
+            </div>
+
           </div>
         </div>
+
+        <!-- Message -->
         <div class="form-group">
-          <label for="message" class="form-label">Message</label>
-          <textarea id="message" rows="5"></textarea>
+          <label for="message" class="form-label">Your Message</label>
+          <textarea id="message" rows="5" required></textarea>
         </div>
+
+        <!-- Newsletter -->
         <div class="form-group checkbox-group">
           <input type="checkbox" id="newsletter">
-          <label for="newsletter">Subscribe to newsletter</label>
+          <label for="newsletter">Subscribe to our monthly adventure newsletter</label>
         </div>
+
+        <!-- Submit -->
         <button type="submit" class="submit-btn">
           <span>Send Message</span>
-          <svg></svg>
+          <svg><!-- arrow icon --></svg>
         </button>
       </form>
     </div>
+
     <div class="form-side-image">
-      <img src="../images/form-side.jpg" alt="Rafting celebration">
+      <img src="../images/form-side.jpg" alt="Rafting team celebrating">
     </div>
   </section>
+
 </main>
 
   <footer>
