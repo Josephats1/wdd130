@@ -471,7 +471,11 @@
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
+              .logo img{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;;
+        }
             .hero p {
                 font-size: 1rem;
             }
@@ -484,14 +488,23 @@
                 grid-template-columns: 1fr;
             }
         }
-        .name{color:deeppink; font-family: Brush Script MT;}
+      
+        .logo img{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#home" class="logo"><i class="fas fa-cube"></i><span class="name">Flow</span>Sate</a>
+           <a href="#home" class="logo">
+  <img src="../images/logo2.png" alt="FlowSate Logo" class="logo-icon">
+  <span class="name"></span><span class="sate"></span>
+</a>
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -664,6 +677,230 @@
                 });
             });
         });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Leaders | Neomorphic Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg: #e0e5ec;
+            --primary-text: #2d3436;
+            --highlight: #0984e3;
+            --shadow-light: rgba(255, 255, 255, 0.8);
+            --shadow-dark: rgba(163, 177, 198, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-weight: 600;
+            text-align: center;
+            color: var(--primary-text);
+            text-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
+        }
+
+        .leadership-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .leader-card {
+            background: var(--primary-bg);
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 8px 8px 15px var(--shadow-dark), -8px -8px 15px var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 12px 12px 20px var(--shadow-dark), -12px -12px 20px var(--shadow-light);
+        }
+
+        .leader-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-bg);
+            box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+            margin-bottom: 20px;
+        }
+
+        .leader-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .leader-title {
+            font-size: 1rem;
+            color: var(--highlight);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--highlight);
+            box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+        }
+
+        @media (max-width: 768px) {
+            .leadership-board {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Leadership Team</h1>
+    <div class="leadership-board" id="leadershipBoard"></div>
+     <div class="leadership-board" id="leadershipBoard"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Leadership data
+const leadershipData = [
+    {
+        name: "Favor Enomongale",
+        title: "President",
+        image: "images/favor.jpg",
+        socials: [
+            { icon: "fab fa-linkedin", url: "#" },
+            { icon: "fab fa-twitter", url: "#" },
+            { icon: "fab fa-github", url: "#" }
+        ]
+    },
+    {
+        name: "Baluku Josephats",
+        title: "Founder & CEO",
+        image: "https://josephats1.github.io/Me/images/about.jpg",
+        socials: [
+            { icon: "fab fa-brief-case", url: "www.baluku.com" },
+            { icon: "fab fa-twitter", url: "#" },
+            { icon: "fab fa-medium", url: "#" }
+        ]
+    },
+    {
+        name: "Godess",
+        title: "Vice President",
+        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80",
+        socials: [
+            { icon: "fab fa-linkedin", url: "#" },
+            { icon: "fab fa-instagram", url: "#" },
+            { icon: "fab fa-dribbble", url: "#" }
+        ]
+    },
+    
+    {
+        name: "Adeagbo Ajibola",
+        title: "Chief Marketing Officer",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+        socials: [
+            { icon: "fab fa-linkedin", url: "#" },
+            { icon: "fab fa-twitter", url: "#" },
+            { icon: "fab fa-youtube", url: "#" }
+        ]
+    },
+    {
+        name: "Emma Williams",
+        title: "VP of Engineering",
+        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        socials: [
+            { icon: "fab fa-linkedin", url: "#" },
+            { icon: "fab fa-github", url: "#" },
+            { icon: "fab fa-dev", url: "#" }
+        ]
+    },
+    {
+        name: "James Rodriguez",
+        title: "VP of Design",
+        image: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80",
+        socials: [
+            { icon: "fab fa-linkedin", url: "#" },
+            { icon: "fab fa-behance", url: "#" },
+            { icon: "fab fa-dribbble", url: "#" }
+        ]
+    }
+];
+
+// Function to render leadership cards
+function renderLeadershipBoard() {
+    const board = document.getElementById('leadershipBoard');
+    
+    leadershipData.forEach(leader => {
+        const card = document.createElement('div');
+        card.className = 'leader-card';
+        
+        card.innerHTML = `
+            <img src="${leader.image}" alt="${leader.name}" class="leader-image">
+            <h2 class="leader-name">${leader.name}</h2>
+            <p class="leader-title">${leader.title}</p>
+            <div class="social-links">
+                ${leader.socials.map(social => `
+                    <a href="${social.url}" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="${social.icon}"></i>
+                    </a>
+                `).join('')}
+            </div>
+        `;
+        
+        board.appendChild(card);
+    });
+}
+
+// Initialize the board when the page loads
+window.onload = renderLeadershipBoard;
     </script>
 </body>
 </html>

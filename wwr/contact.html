@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact RiverRush Adventures for whitewater rafting inquiries">
+  <meta name="description" content="Contact RiverRush Adventures for whitewater rafting inquiries, bookings, and questions. Reach us by phone, email, or visit our location.">
   <meta name="author" content="Baluku Josephats">
-  <title>Contact Us | RiverRush Adventures</title>
+  <title>Contact Us - Whitewater Rafting Experts | RiverRush Adventures</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="styles/rafting.css">
@@ -37,7 +40,7 @@
         <div class="cta-buttons">
           <a href="#contact-form" class="primary-cta">Send a Message</a>
           <a href="tel:+18005551234" class="secondary-cta">
-            <svg><!-- phone icon --></svg> Call Now
+            <i class="fas fa-phone"></i> Call Now: (800) 555-1234
           </a>
         </div>
       </div>
@@ -51,24 +54,24 @@
       <h2 class="section-title">Choose How to Reach Us</h2>
       <div class="contact-cards">
         <div class="contact-card">
-          <div class="card-icon"><svg><!-- map icon --></svg></div>
+          <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
           <h3>Visit Us</h3>
           <address>
             123 River Road<br>
             Rapids City, RC 12345
           </address>
-          <a href="#map" class="card-link">View on Map →</a>
+          <a href="#map" class="card-link">View on Map <i class="fas fa-arrow-right"></i></a>
         </div>
 
         <div class="contact-card highlight">
-          <div class="card-icon"><svg><!-- phone icon --></svg></div>
+          <div class="card-icon"><i class="fas fa-phone"></i></div>
           <h3>Call Us</h3>
           <p>Available 9AM–5PM daily</p>
           <a href="tel:+18005551234" class="card-link">(800) 555-1234</a>
         </div>
 
         <div class="contact-card">
-          <div class="card-icon"><svg><!-- email icon --></svg></div>
+          <div class="card-icon"><i class="fas fa-envelope"></i></div>
           <h3>Email Us</h3>
           <p>Response within 24 hours</p>
           <a href="mailto:info@riverrush.com" class="card-link">info@riverrush.com</a>
@@ -77,27 +80,23 @@
     </section>
 
     <!-- Map Section -->
-<section class="map-section" id="map">
-  <h2 class="section-title">Our Location</h2>
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63835.989870991!2d31.691875029065457!3d-0.3368523317361019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d78ec64d7e6f19%3A0x842d3b49d35cb353!2sMasaka!5e0!3m2!1sen!2sug!4v1753961970250!5m2!1sen!2sug" 
-      loading="lazy" 
-      allowfullscreen 
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Flowsate Office Location in Masaka">
-    </iframe>
-    <div class="map-overlay">
-      <a href="https://maps.google.com?daddr=-0.336852,31.691875" class="directions-btn" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-        </svg>
-        Get Directions
-      </a>
-    </div>
-  </div>
-</section>
+    <section class="map-section" id="map">
+      <h2 class="section-title">Our Location</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63835.989870991!2d31.691875029065457!3d-0.3368523317361019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d78ec64d7e6f19%3A0x842d3b49d35cb353!2sMasaka!5e0!3m2!1sen!2sug!4v1753961970250!5m2!1sen!2sug" 
+          loading="lazy" 
+          allowfullscreen 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="RiverRush Adventures Office Location in Masaka">
+        </iframe>
+        <div class="map-overlay">
+          <a href="https://maps.google.com?daddr=-0.336852,31.691875" class="directions-btn" target="_blank" rel="noopener">
+            <i class="fas fa-directions"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Team Section -->
     <section class="team-section">
@@ -106,10 +105,10 @@
       <div class="team-grid">
         <div class="team-member">
           <div class="member-image">
-            <img src="../images/woman.png" alt="Sarah Johnson">
+            <img src="../images/sarah.png" alt="Sarah Johnson">
             <div class="social-links">
-              <a href="#"><svg><!-- instagram --></svg></a>
-              <a href="#"><svg><!-- facebook --></svg></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
             </div>
           </div>
           <div class="member-info">
@@ -118,7 +117,36 @@
             <p class="bio">15 years of rafting experience with certifications in safety and rescue operations.</p>
           </div>
         </div>
-        <!-- Add more team members if needed -->
+        
+        <div class="team-member">
+          <div class="member-image">
+            <img src="../images/mike.png" alt="Mike Rodriguez">
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Mike Rodriguez</h3>
+            <p class="position">Safety Instructor</p>
+            <p class="bio">Former Olympic kayaker with 10 years of guiding experience in Class V rapids.</p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="member-image">
+            <img src="../images/emily.png" alt="Emily Chen">
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Emily Chen</h3>
+            <p class="position">Adventure Coordinator</p>
+            <p class="bio">Specializes in family rafting trips and beginner experiences with 8 years in the industry.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -130,11 +158,11 @@
           <p>We typically respond within 2 business hours</p>
         </div>
 
-        <form class="modern-form">
+        <form class="modern-form" id="contactForm">
           <!-- Name -->
           <div class="form-group floating">
             <input type="text" id="name" name="name" required>
-            <label for="name">Your Name</label>
+            <label for="name">Your Full Name</label>
           </div>
 
           <!-- Email -->
@@ -143,15 +171,20 @@
             <label for="email">Email Address</label>
           </div>
 
+          <!-- Phone -->
+          <div class="form-group floating">
+            <input type="tel" id="phone" name="phone">
+            <label for="phone">Phone Number (optional)</label>
+          </div>
+
           <!-- Purpose Options -->
           <div class="form-group">
             <p class="form-label">How can we help?</p>
             <div class="purpose-options">
-
               <div class="option-card">
                 <input type="radio" name="purpose" value="general" id="general" checked>
                 <label for="general">
-                  <svg><!-- question icon --></svg>
+                  <i class="fas fa-question-circle"></i>
                   <span>General Question</span>
                 </label>
               </div>
@@ -159,7 +192,7 @@
               <div class="option-card">
                 <input type="radio" name="purpose" value="reservation" id="reservation">
                 <label for="reservation">
-                  <svg><!-- calendar icon --></svg>
+                  <i class="fas fa-calendar-check"></i>
                   <span>Reservation Help</span>
                 </label>
               </div>
@@ -167,11 +200,10 @@
               <div class="option-card">
                 <input type="radio" name="purpose" value="suggestion" id="suggestion">
                 <label for="suggestion">
-                  <svg><!-- lightbulb icon --></svg>
+                  <i class="fas fa-lightbulb"></i>
                   <span>Website Feedback</span>
                 </label>
               </div>
-
             </div>
           </div>
 
@@ -189,8 +221,8 @@
 
           <!-- Submit -->
           <button type="submit" class="submit-btn">
-            <span>Send Message</span>
-            <svg><!-- arrow icon --></svg>
+            <span>Submit Your Inquiry</span>
+            <i class="fas fa-paper-plane"></i>
           </button>
         </form>
       </div>
@@ -199,6 +231,16 @@
         <img src="../images/roft.png" alt="Rafting team celebrating">
       </div>
     </section>
+
+    <!-- Success Message (hidden by default) -->
+    <div class="success-message" id="successMessage">
+      <div class="message-box">
+        <i class="fas fa-check-circle"></i>
+        <h3>Message Sent Successfully!</h3>
+        <p>Thank you for contacting us. We'll get back to you within 2 business hours.</p>
+        <button class="close-message" id="closeMessage">OK</button>
+      </div>
+    </div>
 
   </main>
 
@@ -217,6 +259,18 @@
     </nav>
     <p><a href="wireframe.html" target="_blank">View Contact Page Wireframe</a></p>
   </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('successMessage').style.display = 'flex';
+      this.reset();
+    });
+
+    document.getElementById('closeMessage').addEventListener('click', function() {
+      document.getElementById('successMessage').style.display = 'none';
+    });
+  </script>
 
 </body>
 </html>
