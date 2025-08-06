@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baluku Josephats | WDD 130</title>
-  <!-- NEW META TAGS -->
-  <meta name="description" content="Baluku Josephats' personal home page for WDD130, showcasing web development projects and personal interests.">
-  <meta name="author" content="Baluku Josephats">
-  <link rel="stylesheet" href="styles/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Water Rafting Adventures | Home</title>
+    <meta name="description" content="Experience thrilling white water rafting adventures with expert guides. Book your trip today for family fun or extreme challenges!">
+    <meta name="author" content="Baluku Josephats">
+   <link rel="stylesheet" href="wwr/styles/rafting.css">
 </head>
-  <body>
-    <header>
-      <nav>
-        <a href="#">Home</a>
-        <a href="wwr/">Rafting Website</a>
-      </nav>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="images/logo.webp" alt="Rafting Adventures Logo" width="150">
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="trips.html" class="nav-link">Trips</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
     </header>
+
     <main>
-      <h1>Baluku Josephats | WDD 130</h1>
-      <img src="images/profile.webp" alt="Profile picture of Baluku JJosephats" width="200">
-      <p>
-        Hello! I’m Baluku Josephats, a tech enthusiast and student passionate about web development.
-        I enjoy building user-friendly websites and learning new technologies to create engaging experiences online.
-      </p>
+        <section class="hero-section">
+            <img src="images/hero-image.webp" alt="Exciting white water rafting adventure" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">Experience Nature's Thrill</h1>
+                <a href="trips.html" class="cta-button">Book Your Adventure Today!</a>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <h2 class="section-title">Stay Updated</h2>
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <label for="newsletter-name" class="form-label">Full Name:</label>
+                    <input type="text" id="newsletter-name" name="name" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="newsletter-email" class="form-label">Email:</label>
+                    <input type="email" id="newsletter-email" name="email" required class="form-input">
+                </div>
+                <button type="submit" class="submit-button">Join Our Newsletter</button>
+            </form>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <img src="images/safety.webp" alt="Safety equipment" class="feature-image">
+                    <h3 class="feature-title">Safety First</h3>
+                    <p class="feature-description">Certified guides and top-quality equipment ensure your adventure is both thrilling and safe.</p>
+                </article>
+                <article class="feature-card">
+                    <img src="images/scenery.webp" alt="Beautiful river scenery" class="feature-image">
+                    <h3 class="feature-title">Breathtaking Scenery</h3>
+                    <p class="feature-description">Experience nature's beauty as you navigate through stunning river landscapes.</p>
+                </article>
+            </div>
+        </section>
     </main>
-     <!-- ASIDE -->
-    <aside>
-  <h2>Uganda</h2>
-  <img src="images/uganda.webp" alt="Kampala Capital City of Uganda" width="200">
-  <p>Uganda, known as the "Pearl of Africa," is famous for its wildlife, including mountain gorillas, and the stunning Lake Victoria.</p>
-</aside>
-    <footer>
-      <p>&copy; 2025 &bull; Baluku Josephats &bull; Uganda</p>
+
+    <footer class="site-footer">
+        <p class="copyright">&copy; 2023 White Water Rafting Adventures | Baluku Josephats</p>
+        <div class="social-links">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook-icon.webp" alt="Facebook" width="30"></a>
+            <a href="https://twitter.com" aria-label="Twitter"><img src="images/twitter-icon.webp" alt="Twitter" width="30"></a>
+            <a href="https://instagram.com" aria-label="Instagram"><img src="images/instagram-icon.webp" alt="Instagram" width="30"></a>
+        </div>
     </footer>
-  </body>
+</body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Glass Website</title>
+    <title>FlowSate | Modern Tech Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -51,7 +51,7 @@
             border-radius: 50px;
             padding: 0.5rem 1.5rem;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(223, 24, 140, 0.2);
+            border: 1px solid rgba(108, 92, 231, 0.2);
             transition: all 0.3s ease;
         }
         
@@ -63,18 +63,20 @@
         
         .logo {
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin-right: 1.5rem;
             color: var(--primary);
             text-decoration: none;
             display: flex;
-            font-family: 'Brush Script MT', Courier New, Courier, monospace;
             align-items: center;
+            font-family: 'Poppins', sans-serif;
         }
         
-        .logo i {
+        .logo img {
+            width: 30px;
+            height: 30px;
             margin-right: 0.5rem;
-            font-size: 1.2rem;
+            border-radius: 50%;
         }
         
         .nav-links {
@@ -91,10 +93,23 @@
             transition: all 0.3s ease;
             position: relative;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-links i {
+            font-size: 1rem;
+            color: var(--primary);
+            transition: all 0.3s ease;
         }
         
         .nav-links a:hover {
             color: var(--primary);
+        }
+        
+        .nav-links a:hover i {
+            transform: scale(1.1);
         }
         
         .nav-links a::after {
@@ -203,7 +218,7 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             width: 100%;
             max-width: 1200px;
@@ -227,6 +242,7 @@
         .service-card:nth-child(1) { animation: fadeInUp 0.8s ease 0.2s forwards; }
         .service-card:nth-child(2) { animation: fadeInUp 0.8s ease 0.4s forwards; }
         .service-card:nth-child(3) { animation: fadeInUp 0.8s ease 0.6s forwards; }
+        .service-card:nth-child(4) { animation: fadeInUp 0.8s ease 0.8s forwards; }
         
         .service-card:hover {
             transform: translateY(-10px);
@@ -394,6 +410,118 @@
             transition: width 1s ease;
         }
         
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-column {
+            padding: 1rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 3px;
+        }
+        
+        .footer-column p {
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            color: var(--primary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--text);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -443,39 +571,18 @@
                 gap: 1rem;
             }
             
-            .nav-links a {
-                font-size: 0;
+            .nav-text {
+                display: none;
             }
             
-            .nav-links a::before {
-                font-size: 1rem;
-                display: inline-block;
-            }
-            
-            .nav-links li:nth-child(1) a::before {
-                content: '🏠';
-            }
-            
-            .nav-links li:nth-child(2) a::before {
-                content: '🛠️';
-            }
-            
-            .nav-links li:nth-child(3) a::before {
-                content: '📂';
-            }
-            
-            .nav-links li:nth-child(4) a::before {
-                content: 'ℹ️';
+            .nav-links a i {
+                font-size: 1.2rem;
             }
             
             .hero h1 {
                 font-size: 2.2rem;
             }
-              .logo img{
-            width:40px;
-            height: 40px;
-            border-radius: 50%;;
-        }
+            
             .hero p {
                 font-size: 1rem;
             }
@@ -484,15 +591,17 @@
                 font-size: 2rem;
             }
             
-            .services-grid, .projects-grid {
+            .services-grid, .projects-grid, .footer-container {
                 grid-template-columns: 1fr;
             }
-        }
-      
-        .logo img{
-            width:40px;
-            height: 40px;
-            border-radius: 50%;;
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .about-text {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -500,16 +609,16 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-           <a href="#home" class="logo">
-  <img src="../images/logo2.png" alt="FlowSate Logo" class="logo-icon">
-  <span class="name"></span><span class="sate"></span>
-</a>
+            <a href="#home" class="logo">
+                <img src="../images/logo2.png" alt="FlowSate Logo">
+                FlowSate
+            </a>
 
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> <span class="nav-text">Home</span></a></li>
+                <li><a href="#services"><i class="fas fa-cogs"></i> <span class="nav-text">Services</span></a></li>
+                <li><a href="#projects"><i class="fas fa-briefcase"></i> <span class="nav-text">Projects</span></a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> <span class="nav-text">About</span></a></li>
             </ul>
         </div>
     </nav>
@@ -517,8 +626,8 @@
     <!-- Home Section -->
     <section id="home">
         <div class="hero">
-            <h1>Create Stunning Glass Designs</h1>
-            <p>We combine modern glass morphism with neomorphic elements to create beautiful, interactive experiences that captivate your audience.</p>
+            <h1>Innovative Tech Solutions</h1>
+            <p>FlowSate combines cutting-edge technology with elegant design to create powerful digital experiences that drive results.</p>
             <a href="#services" class="btn">Explore Our Services</a>
         </div>
     </section>
@@ -529,24 +638,31 @@
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fas fa-paint-brush"></i>
+                    <i class="fas fa-laptop-code"></i>
                 </div>
-                <h3>UI/UX Design</h3>
-                <p>Beautiful, intuitive interfaces with a focus on user experience and modern design trends.</p>
+                <h3>Software Development</h3>
+                <p>Custom software solutions tailored to your business needs, built with modern technologies and best practices.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fas fa-code"></i>
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>Web Development</h3>
-                <p>Responsive, performant websites built with the latest technologies and best practices.</p>
+                <h3>Cyber Security Tools</h3>
+                <p>Advanced security solutions to protect your digital assets and ensure data privacy.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI Solutions</h3>
+                <p>Intelligent systems that learn and adapt to provide personalized experiences and automation.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-mobile-alt"></i>
                 </div>
                 <h3>Mobile Apps</h3>
-                <p>Cross-platform mobile applications that look and feel native on every device.</p>
+                <p>Cross-platform mobile applications with native performance and beautiful interfaces.</p>
             </div>
         </div>
     </section>
@@ -558,36 +674,36 @@
             <div class="project-card">
                 <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                 <div class="project-info">
-                    <h3>Glass Dashboard</h3>
-                    <p>A modern admin dashboard with glass morphism elements and interactive charts.</p>
+                    <h3>Dear App</h3>
+                    <p>A secure messaging platform with enhanced privacy features and customization options.</p>
                     <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Tailwind</span>
-                        <span class="tag">D3.js</span>
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Encryption</span>
                     </div>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                 <div class="project-info">
-                    <h3>Neo Portfolio</h3>
-                    <p>Personal portfolio website combining neomorphism and glass design elements.</p>
+                    <h3>CyberShield Suite</h3>
+                    <p>Comprehensive security tools for network monitoring and threat detection.</p>
                     <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">GSAP</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Cyber Security</span>
+                        <span class="tag">AI</span>
                     </div>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                 <div class="project-info">
-                    <h3>Mobile Banking App</h3>
-                    <p>Financial application with glass UI elements and secure transaction features.</p>
+                    <h3>SmartAI Platform</h3>
+                    <p>Machine learning framework for predictive analytics and automation.</p>
                     <div class="project-tags">
-                        <span class="tag">Flutter</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Node.js</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Cloud</span>
                     </div>
                 </div>
             </div>
@@ -599,19 +715,18 @@
         <h2 class="section-title">About Us</h2>
         <div class="about-content">
             <div class="about-image">
-                <!-- This would be your image -->
                 <div style="width:100%;height:100%;background:url('https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover;"></div>
             </div>
             <div class="about-text">
-                <h2>Innovating Design Since 2020</h2>
-                <p>We're a passionate team of designers and developers dedicated to creating beautiful, functional digital experiences. Our specialty lies in combining the latest design trends like glass morphism and neomorphism with solid development practices.</p>
-                <p>We believe that design should be both aesthetically pleasing and highly usable, creating interfaces that users love to interact with.</p>
+                <h2>Innovating Since 2020</h2>
+                <p>FlowSate is a team of passionate technologists dedicated to building solutions that bridge the gap between cutting-edge technology and real-world applications.</p>
+                <p>We specialize in creating secure, scalable, and intelligent systems that help businesses thrive in the digital age.</p>
                 
                 <div class="skills">
-                    <h3>Our Skills</h3>
+                    <h3>Our Expertise</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>UI/UX Design</span>
+                            <span>Software Development</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-bar">
@@ -620,7 +735,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Frontend Development</span>
+                            <span>Cyber Security</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -629,7 +744,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Mobile Development</span>
+                            <span>AI/ML Development</span>
                             <span>85%</span>
                         </div>
                         <div class="skill-bar">
@@ -640,6 +755,59 @@
             </div>
         </div>
     </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="#home" class="logo" style="font-size: 1.5rem; margin-bottom: 1rem; display: inline-block;">
+                    <img src="../images/logo2.png" alt="FlowSate Logo" style="width: 40px; height: 40px;">
+                    FlowSate
+                </a>
+                <p>Building the future with innovative technology solutions that empower businesses and individuals.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Software Development</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Cyber Security</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> AI Solutions</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Mobile Apps</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Tech Park, Innovation City</a></li>
+                    <li><a href="mailto:contact@flowsate.com"><i class="fas fa-envelope"></i> contact@flowsate.com</a></li>
+                    <li><a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 FlowSate. All Rights Reserved. | <a href="#" style="color: var(--primary);">Privacy Policy</a> | <a href="#" style="color: var(--primary);">Terms of Service</a></p>
+        </div>
+    </footer>
     
     <script>
         // Animate skill bars on scroll
@@ -677,230 +845,6 @@
                 });
             });
         });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Leaders | Neomorphic Board</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-bg: #e0e5ec;
-            --primary-text: #2d3436;
-            --highlight: #0984e3;
-            --shadow-light: rgba(255, 255, 255, 0.8);
-            --shadow-dark: rgba(163, 177, 198, 0.6);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--primary-bg);
-            color: var(--primary-text);
-            min-height: 100vh;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h1 {
-            margin-bottom: 40px;
-            font-weight: 600;
-            text-align: center;
-            color: var(--primary-text);
-            text-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
-        }
-
-        .leadership-board {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .leader-card {
-            background: var(--primary-bg);
-            border-radius: 20px;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            box-shadow: 8px 8px 15px var(--shadow-dark), -8px -8px 15px var(--shadow-light);
-            transition: all 0.3s ease;
-        }
-
-        .leader-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 12px 12px 20px var(--shadow-dark), -12px -12px 20px var(--shadow-light);
-        }
-
-        .leader-image {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--primary-bg);
-            box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
-            margin-bottom: 20px;
-        }
-
-        .leader-name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .leader-title {
-            font-size: 1rem;
-            color: var(--highlight);
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            width: 100%;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-text);
-            text-decoration: none;
-            font-size: 1.2rem;
-            box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            color: var(--highlight);
-            box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
-        }
-
-        @media (max-width: 768px) {
-            .leadership-board {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>Our Leadership Team</h1>
-    <div class="leadership-board" id="leadershipBoard"></div>
-     <div class="leadership-board" id="leadershipBoard"></div>
-
-    <script src="script.js"></script>
-    <script>
-        // Leadership data
-const leadershipData = [
-    {
-        name: "Favor Enomongale",
-        title: "President",
-        image: "images/favor.jpg",
-        socials: [
-            { icon: "fab fa-linkedin", url: "#" },
-            { icon: "fab fa-twitter", url: "#" },
-            { icon: "fab fa-github", url: "#" }
-        ]
-    },
-    {
-        name: "Baluku Josephats",
-        title: "Founder & CEO",
-        image: "https://josephats1.github.io/Me/images/about.jpg",
-        socials: [
-            { icon: "fab fa-brief-case", url: "www.baluku.com" },
-            { icon: "fab fa-twitter", url: "#" },
-            { icon: "fab fa-medium", url: "#" }
-        ]
-    },
-    {
-        name: "Godess",
-        title: "Vice President",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80",
-        socials: [
-            { icon: "fab fa-linkedin", url: "#" },
-            { icon: "fab fa-instagram", url: "#" },
-            { icon: "fab fa-dribbble", url: "#" }
-        ]
-    },
-    
-    {
-        name: "Adeagbo Ajibola",
-        title: "Chief Marketing Officer",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-        socials: [
-            { icon: "fab fa-linkedin", url: "#" },
-            { icon: "fab fa-twitter", url: "#" },
-            { icon: "fab fa-youtube", url: "#" }
-        ]
-    },
-    {
-        name: "Emma Williams",
-        title: "VP of Engineering",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        socials: [
-            { icon: "fab fa-linkedin", url: "#" },
-            { icon: "fab fa-github", url: "#" },
-            { icon: "fab fa-dev", url: "#" }
-        ]
-    },
-    {
-        name: "James Rodriguez",
-        title: "VP of Design",
-        image: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80",
-        socials: [
-            { icon: "fab fa-linkedin", url: "#" },
-            { icon: "fab fa-behance", url: "#" },
-            { icon: "fab fa-dribbble", url: "#" }
-        ]
-    }
-];
-
-// Function to render leadership cards
-function renderLeadershipBoard() {
-    const board = document.getElementById('leadershipBoard');
-    
-    leadershipData.forEach(leader => {
-        const card = document.createElement('div');
-        card.className = 'leader-card';
-        
-        card.innerHTML = `
-            <img src="${leader.image}" alt="${leader.name}" class="leader-image">
-            <h2 class="leader-name">${leader.name}</h2>
-            <p class="leader-title">${leader.title}</p>
-            <div class="social-links">
-                ${leader.socials.map(social => `
-                    <a href="${social.url}" class="social-link" target="_blank" rel="noopener noreferrer">
-                        <i class="${social.icon}"></i>
-                    </a>
-                `).join('')}
-            </div>
-        `;
-        
-        board.appendChild(card);
-    });
-}
-
-// Initialize the board when the page loads
-window.onload = renderLeadershipBoard;
     </script>
 </body>
 </html>
